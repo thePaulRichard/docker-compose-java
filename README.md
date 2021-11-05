@@ -23,5 +23,7 @@ docker-compose up
 ## TO-DO
 
 Adicionar outros serviços como REDIS e MONGODB.
+
 Qualque sugestão será bem-vinda.
+
 Duvidas entre em contato com o time de DevOps.
