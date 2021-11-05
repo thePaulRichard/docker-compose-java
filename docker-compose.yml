@@ -1,0 +1,37 @@
+version: "3.9"
+    
+services:
+  app:
+    depends_on:
+      - db
+      - rabbitmq
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/app
+      SPRING_DATASOURCE_USERNAME: app
+      SPRING_DATASOURCE_PASSWORD: app
+      RABBIT_HOST: rabbitmq
+      RABBIT_USER: guest
+      RABBIT_PASSWORD: guest
+
+  db:
+    image: mysql:8
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somepass
+      MYSQL_DATABASE: app
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app  
+  
+  rabbitmq:
+    image: rabbitmq:3
+    restart: always
+      
+volumes:
+  db_data: {}
