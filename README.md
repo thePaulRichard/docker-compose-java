@@ -20,6 +20,12 @@ Com os arquivos pronto, execute o comando abaixo para subir o app:
 docker-compose up
 ```
 
+Caso seja necessário fazer um re-build, então execute o comando abaixo:
+
+```
+docker-compose up --build
+```
+
 ## TO-DO
 
 Adicionar outros serviços como REDIS e MONGODB.
