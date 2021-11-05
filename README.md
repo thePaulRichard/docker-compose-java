@@ -1,6 +1,6 @@
 # Docker Compose Java
 
-Docker-compose para testes com aplicações JAVA (Feito pelo time DevOps)
+Docker-compose para testes com aplicações JAVA (Feito pelo time **DevOps**).
 
 Recursos disponiveis até momento:
 
@@ -12,7 +12,7 @@ Recursos disponiveis até momento:
 
 - Copie o Dockerfile original da aplicação e cole aqui.
 - [`Dockerfile`](./Dockerfile) contém um exemplo.
-  - Em alguns casos é necessário adicionar o ENTRYPOINT ao final do Dockerfile, segue exemplo abaixo:
+  - Em alguns casos (error: exit code 0) é necessário adicionar o ENTRYPOINT ao final do Dockerfile, segue exemplo abaixo:
     
 > ENTRYPOINT ["java","-jar","/ecommerce-service-provider-application.jar"]
 
@@ -29,11 +29,16 @@ Caso seja necessário fazer um re-build, então execute o comando abaixo:
 ```
 docker-compose up --build
 ```
+## Limpeza
+
+Após finalizar os testes, execute o comando abaixo para limpar os recursos criados pelo docker-compose:
+
+```
+docker-compose down -v --rmi all
+```
 
 ## TO-DO
 
-Adicionar outros serviços como REDIS e MONGODB.
-
-Qualque sugestão será bem-vinda.
-
-Duvidas entre em contato com o time de DevOps.
+- Adicionar outros serviços como REDIS e MONGODB.
+- Qualque sugestão será bem-vinda.
+- **Duvidas** entre em contato com o time de DevOps.
