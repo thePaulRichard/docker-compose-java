@@ -12,6 +12,10 @@ Recursos disponiveis até momento:
 
 - Copie o Dockerfile original da aplicação e cole aqui.
 - [`Dockerfile`](./Dockerfile) contém um exemplo.
+  - Em alguns casos é necessário adicionar o ENTRYPOINT ao final do Dockerfile, segue exemplo abaixo:
+    
+> ENTRYPOINT ["java","-jar","/ecommerce-service-provider-application.jar"]
+
 - Copie o .jar neste diretório para efetuar o build.
 
 Com os arquivos pronto, execute o comando abaixo para subir o app:
