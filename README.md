@@ -1,8 +1,8 @@
 # Docker Compose Java
 
-Docker-compose para testes com aplicações JAVA (Feito pelo time **DevOps**).
+Docker-compose para o time de DevOps efetuar testes com aplicações JAVA.
 
-Recursos disponiveis até momento:
+Recursos disponiveis:
 
 - build do .jar expondo para: http://localhost:8080
 - mysql:8
@@ -36,9 +36,3 @@ Após finalizar os testes, execute o comando abaixo para limpar os recursos cria
 ```
 docker-compose down -v --rmi all
 ```
-
-## TO-DO
-
-- Adicionar outros serviços como REDIS e MONGODB.
-- Qualque sugestão será bem-vinda.
-- **Duvidas** entre em contato com o time de DevOps.
