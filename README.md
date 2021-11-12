@@ -7,6 +7,8 @@ Recursos disponiveis:
 - build do .jar expondo para: http://localhost:8080
 - mysql:8
 - rabbitmq:3
+- modo **DEBUG** 
+  - para habilitar descomente a linha '13' em [`docker-compose`](./docker-compose.yml)
 
 ## Como usar
 
