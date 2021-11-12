@@ -10,6 +10,7 @@ services:
       - "8080:8080"
     restart: always
     environment:
+      #DEBUG: enable
       SERVER_PORT: 8080
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/app
       SPRING_DATASOURCE_USERNAME: app
