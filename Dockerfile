@@ -1,7 +1,7 @@
 FROM openjdk:11
 VOLUME /tmp
-ADD notification.jar notification.jar
+ADD smaug-read.jar smaug-read.jar
 RUN echo "America/Fortaleza" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
-RUN bash -c 'touch /notification.jar'
-ENTRYPOINT ["java","-jar","/notification.jar"]
+RUN bash -c 'touch /smaug-read.jar'
+ENTRYPOINT ["java","-jar","/smaug-read.jar"]

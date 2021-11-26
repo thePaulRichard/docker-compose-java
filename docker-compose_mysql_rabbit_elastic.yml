@@ -5,6 +5,7 @@ services:
     depends_on:
       - db
       - rabbitmq
+      - elasticsearch
     build: .
     ports:
       - "8080:8080"
@@ -18,6 +19,7 @@ services:
       RABBIT_HOST: rabbitmq
       RABBIT_USER: guest
       RABBIT_PASSWORD: guest
+      ELASTICSEARCH_HOST: elasticsearch
 
   db:
     image: mysql:8
@@ -33,6 +35,27 @@ services:
   rabbitmq:
     image: rabbitmq:3
     restart: always
+
+  elasticsearch:
+    image: elasticsearch:7.14.2
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+    restart: always
+    environment:
+      discovery.type: "single-node"
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+  
+  kibana:
+    depends_on:
+      - elasticsearch
+    image: kibana:7.14.2
+    ports:
+      - "5601:5601"
+    restart: always
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
       
 volumes:
   db_data: {}
+  elastic_data : {}

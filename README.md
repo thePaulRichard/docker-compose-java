@@ -7,6 +7,8 @@ Recursos disponiveis:
 - build do .jar expondo para: http://localhost:8080
 - mysql:8
 - rabbitmq:3
+- elasticsearch
+- kibana
 - modo **DEBUG** 
   - para habilitar descomente a linha '13' em [`docker-compose`](./docker-compose.yml)
 
@@ -20,10 +22,16 @@ Recursos disponiveis:
 
 - Copie o .jar neste diretório para efetuar o build.
 
-Com os arquivos pronto, execute o comando abaixo para subir o app:
+Com os arquivos pronto, execute o comando abaixo para subir o app (com os recursos minimos: mysql e rabbitmq):
 
 ```
 docker-compose up
+```
+
+Para subir com elaticsearch e kibana, aponte para o arquivo **docker-compose_mysql_rabbit_elastic.yml**
+
+```
+docker-compose -f docker-compose_mysql_rabbit_elastic.yml up
 ```
 
 Caso seja necessário fazer um re-build, então execute o comando abaixo:
@@ -37,4 +45,6 @@ Após finalizar os testes, execute o comando abaixo para limpar os recursos cria
 
 ```
 docker-compose down -v --rmi all
+#ou
+docker-compose -f docker-compose_mysql_rabbit_elastic.yml down -v --rmi all
 ```
