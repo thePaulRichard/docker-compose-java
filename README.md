@@ -15,6 +15,14 @@ Recursos disponiveis:
 
 ## Como usar
 
+<!-- blank line -->
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="poster.png">
+    <source src="demo.mp4" type="video/mp4">
+  </video>
+</figure>
+<!-- blank line -->
+
 - Faça o clone desse repositorio.
 - Execute o script: ['build_jar.sh`](./build_jar.sh) e informe os valores solicitados (repo, branch, projeto).
   - Caso o repositorio da aplicação java tenha varios 'modulos' (subpastas), digite o nome do modulo quando solicitado pelo script.
