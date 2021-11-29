@@ -15,7 +15,7 @@ A simple docker-compose to run .jar apps.
 
 ## How to use
 
-![Demo](/demo.mp4)
+[![Demo](/poster.png)](/demo.mp4)
 
 - Clone this repo locally.
 - Run the script: [build_jar.sh](./build_jar.sh) and pass the values as asked (repo, branch, module).
