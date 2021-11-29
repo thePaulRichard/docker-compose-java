@@ -59,3 +59,4 @@ docker-compose -f docker-compose_mysql_rabbit_elastic.yml down -v --rmi all
 
 ## TO-DO
 - [ ] Build with Github actions
+- [ ] Create Python build script

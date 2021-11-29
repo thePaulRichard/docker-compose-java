@@ -3,19 +3,20 @@ set -e
 
 root=$PWD
 
-read -p "REPO [None]:" repo
+read -p "REPO [git@github.com:thePaulRichard/simple-java.git]:" repo
+repo=${repo:-"git@github.com:thePaulRichard/simple-java.git"}
 git clone ${repo} git_project
 cd git_project
 
 read -p "BRANCH [develop]:" branch
-branch=${branch:-develop}
+branch=${branch:-"develop"}
 git switch $branch
 
-read -p "PROJECT/MODULE [None]:" project
-project=${project:-"./"}
+read -p "MODULE [None]:" module
+module=${module:-"./"}
 
-mvn -pl $project -am -DskipTests -U clean install
-cd $project
+mvn -pl $module -am -DskipTests -U clean install
+cd $module
 cp ./target/*.jar $root/app.jar
 cd $root
 
@@ -23,14 +24,14 @@ echo ""
 run=$(which docker-compose)
 
 # docker-compose
-PS3="Qual ambiente deseja subir? "
+PS3="What docker-compose you want to run? "
 
-select docker in basico completo; do
+select docker in basic complete; do
 	case $docker in
-		basico)
+		basic)
 			exec $run up --build
 			;;
-		completo)
+		complete)
 			exec $run -f docker-compose_mysql_rabbit_elastic.yml up --build
 			;;
 		*)
