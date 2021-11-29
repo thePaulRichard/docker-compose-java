@@ -1,6 +1,7 @@
 # Docker Compose for .jar
 
 A simple docker-compose to run .jar apps.
+[![Demo](/poster.png)](/demo.mp4)
 
 ## Features:
 
@@ -14,8 +15,6 @@ A simple docker-compose to run .jar apps.
   - or in the file [`compose_mysql_rabbit_elastic.yml`](./compose_mysql_rabbit_elastic.yml).
 
 ## How to use
-
-[![Demo](/poster.png)](/demo.mp4)
 
 - Clone this repo locally.
 - Run the script: [build_jar.sh](./build_jar.sh) and pass the values as asked (repo, branch, module).
