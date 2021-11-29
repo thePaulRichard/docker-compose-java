@@ -1,9 +1,10 @@
 # Docker Compose for .jar
-**A simple docker-compose to run .jar apps.**
 
-[![Demo](/poster.png)](/demo.mp4)
+A simple docker-compose to run .jar apps.
+[![Demo](/poster.png)](/demo.webm)
 
 ## Features:
+
 - Automatic build form app.jar and expose to: http://localhost:8080
 - mysql:8 with dump support in the [`dump`](./dump) folder.
 - rabbitmq:3
@@ -14,6 +15,7 @@
   - or in the file [`compose_mysql_rabbit_elastic.yml`](./compose_mysql_rabbit_elastic.yml).
 
 ## How to use
+
 - Clone this repo locally.
 - Run the script: [build_jar.sh](./build_jar.sh) and pass the values as asked (repo, branch, module).
   - If the **repo** has multiple modules, inform the name of the module to build.
@@ -28,21 +30,25 @@ The script will ask you for what docker-compose to run:
 You also can execute the docker-compose manually. It needed the app.jar in the root for this. 
 
 ### Basic build:
+
 ```
 docker-compose up
 ```
 
 ### Complete build:
+
 ```
 docker-compose -f docker-compose_mysql_rabbit_elastic.yml up
 ```
 
 To do a **re-build** inform the --build parameter:
+
 ```
 docker-compose up --build
 ```
 
 ## Clean
+
 You can clean the docker images and container with the following command:
 
 ```
