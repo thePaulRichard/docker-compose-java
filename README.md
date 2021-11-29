@@ -2,7 +2,7 @@
 
 A simple docker-compose to run .jar apps.
 
-Features:
+## Features:
 
 - Automatic build form app.jar and expose to: http://localhost:8080
 - mysql:8 with dump support in the [`dump`](./dump) folder.
@@ -15,7 +15,7 @@ Features:
 
 ## How to use
 
-![video](/demo.mp4)
+![Demo](/demo.mp4)
 
 - Clone this repo locally.
 - Run the script: [build_jar.sh](./build_jar.sh) and pass the values as asked (repo, branch, module).
@@ -29,13 +29,14 @@ The script will ask you for what docker-compose to run:
 - Complete: Mysql, RabbitMQ, ElasticSearch, and Kibana.
 
 You also can execute the docker-compose manually. It needed the app.jar in the root for this. 
-Basic build:
+
+### Basic build:
 
 ```
 docker-compose up
 ```
 
-Complete build:
+### Complete build:
 
 ```
 docker-compose -f docker-compose_mysql_rabbit_elastic.yml up
@@ -57,5 +58,5 @@ docker-compose down -v --rmi all
 docker-compose -f docker-compose_mysql_rabbit_elastic.yml down -v --rmi all
 ```
 
-TO-DO
+## TO-DO
 - [ ] Build with Github actions
