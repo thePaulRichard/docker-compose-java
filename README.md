@@ -1,7 +1,7 @@
 # Docker Compose for .jar
 **A simple docker-compose to run .jar apps.**
 
-[![Demo](/poster.png)](/demo.webm)
+https://user-images.githubusercontent.com/15007933/143975830-a68e293a-c415-4b23-9a57-2b8e4a675c2a.mp4
 
 ## Features:
 - Automatic build form app.jar and expose to: http://localhost:8080
