@@ -3,7 +3,7 @@ version: "3.9"
 services:
   app:
     build: .
-    image: app:tag
+    image: app:latest
     ports:
       - "8080:8080"
     restart: always
