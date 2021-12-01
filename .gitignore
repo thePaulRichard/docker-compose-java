@@ -25,5 +25,8 @@ hs_err_pid*
 # SQL files
 *.sql
 
-#git repo
+# Git REPO
 git_project/
+
+# Dump Folder
+dump/*
